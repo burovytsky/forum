@@ -2,47 +2,47 @@ package forum.service;
 
 import forum.model.Post;
 import forum.model.User;
-import forum.repository.PostRepository;
-import forum.repository.UserRepository;
+import forum.repository.PostMemRepository;
+import forum.repository.UserMemRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
 @Service
 public class ForumService {
-    private final PostRepository postRepository;
-    private final UserRepository userRepository;
+    private final PostMemRepository postMemRepository;
+    private final UserMemRepository userMemRepository;
 
-    public ForumService(PostRepository postRepository, UserRepository userRepository) {
-        this.postRepository = postRepository;
-        this.userRepository = userRepository;
+    public ForumService(PostMemRepository postMemRepository, UserMemRepository userMemRepository) {
+        this.postMemRepository = postMemRepository;
+        this.userMemRepository = userMemRepository;
     }
 
     public void save(Post post) {
-        postRepository.save(post);
+        postMemRepository.save(post);
     }
 
     public Collection<Post> getAll() {
-        return postRepository.getAll();
+        return postMemRepository.getAll();
     }
 
     public Post findById(int id) {
-        return postRepository.findById(id);
+        return postMemRepository.findById(id);
     }
 
     public void saveUser(User user) {
-        userRepository.saveUser(user);
+        userMemRepository.saveUser(user);
     }
 
     public User findUserById(int id) {
-        return userRepository.findById(id);
+        return userMemRepository.findById(id);
     }
 
     public Collection<User> getAllUsers() {
-        return userRepository.getAll();
+        return userMemRepository.getAll();
     }
 
     public boolean checkUser(String username, String password) {
-        return userRepository.checkUser(username, password);
+        return userMemRepository.checkUser(username, password);
     }
 }

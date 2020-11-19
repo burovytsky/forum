@@ -25,7 +25,7 @@
                 <label for="name">Name</label>
                 <input type="text" class="form-control" name="name" id="name">
                 <label for="description">Text</label>
-                <input type="text" class="form-control" name="desc" id="description">
+                <input type="text" class="form-control" name="description" id="description">
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>

@@ -26,7 +26,7 @@
                 <label for="name">Name</label>
                 <input type="text" class="form-control" value="${post.name}" name="name" id="name">
                 <label for="description">Text</label>
-                <input type="text" class="form-control" value="${post.desc}" name="desc" id="description">
+                <input type="text" class="form-control" value="${post.description}" name="description" id="description">
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>

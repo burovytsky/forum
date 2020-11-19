@@ -1,6 +1,7 @@
 package forum.controller;
 
 import forum.model.Post;
+import forum.service.ForumCrudService;
 import forum.service.ForumService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class PostController {
-    private final ForumService service;
+    private final ForumCrudService service;
 
-    public PostController(ForumService service) {
+    public PostController(ForumCrudService service) {
         this.service = service;
     }
 

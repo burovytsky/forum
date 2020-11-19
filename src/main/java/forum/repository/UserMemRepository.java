@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Repository
-public class UserRepository {
+public class UserMemRepository {
     private final Map<Integer, User> users = new HashMap<>();
     int idCount = 1;
 
-    public UserRepository() {
+    public UserMemRepository() {
         User user = new User();
         user.setId(idCount++);
         user.setUsername("admin");

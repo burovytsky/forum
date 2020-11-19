@@ -1,5 +1,6 @@
 package forum.controller;
 
+import forum.service.ForumCrudService;
 import forum.service.ForumService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IndexController {
-    private final ForumService service;
+    private final ForumCrudService service;
 
-    public IndexController(ForumService service) {
+    public IndexController(ForumCrudService service) {
         this.service = service;
     }
 

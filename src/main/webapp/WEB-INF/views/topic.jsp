@@ -40,7 +40,7 @@
                     <tbody id="tbody">
                     <tr>
                         <td align="center">
-                            <c:out value="${post.desc}"/>
+                            <c:out value="${post.description}"/>
                         </td>
                     </tr>
                     </tbody>

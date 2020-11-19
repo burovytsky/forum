@@ -52,7 +52,7 @@
                                 <h4 class="text-secondary"><a href="<c:url value='/topic?id=${post.id}'/>"><c:out
                                         value="${post.name}"/></a></h4>
                                 <br>
-                                <c:out value="${post.desc}"/>
+                                <c:out value="${post.description}"/>
                             </td>
                             <td>
                                 <c:out value="${post.created}"/>
