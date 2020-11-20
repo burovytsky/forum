@@ -32,6 +32,7 @@
                     <div class="row">
                         <div class="col-sm"><h4>${post.name}</h4>
                         </div>
+                        <div class="col-md-6 text-right text-info">Login as ${user.username}</div>
                     </div>
                 </div>
             </div>

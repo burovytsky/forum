@@ -1,5 +1,9 @@
 package forum.service;
 
+import forum.model.Authority;
+import forum.model.User;
+import forum.repository.AuthorityRepository;
+import forum.repository.UserRepository;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import forum.model.Post;
@@ -13,9 +17,13 @@ import java.util.List;
 public class ForumCrudService {
 
     private final PostRepository posts;
+    private final UserRepository users;
+    private final AuthorityRepository authorities;
 
-    public ForumCrudService(PostRepository posts) {
+    public ForumCrudService(PostRepository posts, UserRepository users, AuthorityRepository authorities) {
         this.posts = posts;
+        this.users = users;
+        this.authorities = authorities;
     }
 
     public List<Post> getAll() {
@@ -31,4 +39,11 @@ public class ForumCrudService {
         return posts.findById(id).get();
     }
 
+    public Authority findByAuthority(String authority) {
+        return authorities.findByAuthority(authority);
+    }
+
+    public void saveUser(User user) {
+        users.save(user);
+    }
 }

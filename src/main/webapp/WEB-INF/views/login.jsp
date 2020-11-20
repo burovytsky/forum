@@ -30,8 +30,14 @@
 </head>
 <body>
 <div class="container pt-3">
+
     <div class="row">
         <div class="card" style="width: 100%">
+            <c:if test="${not empty errorMessge}">
+                <div class="alert alert-danger" role="alert">
+                        ${errorMessge}
+                </div>
+            </c:if>
             <div class="card-header">
                 Authorization
             </div>
@@ -46,6 +52,7 @@
                 </div>
                 <a class="btn btn-secondary" href="<c:url value='/reg'/>" role="button">Registration</a>
                 <button type="submit" class="btn btn-primary">Log in</button>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             </form>
         </div>
     </div>

@@ -33,6 +33,8 @@
                         <div class="col-sm">Forum
                         </div>
                         <a class="col-sm " href="<c:url value="/create"/>">Create new post</a>
+                        <div class="col-md-6 text-right text-info">Login as ${user.username}</div>
+                        </div>
                     </div>
                 </div>
             </div>
