@@ -17,6 +17,3 @@ CREATE TABLE users (
                        enabled boolean default true,
                        authority_id int not null references authorities(id)
 );
-
-insert into authorities (authority) values ('ROLE_USER');
-insert into authorities (authority) values ('ROLE_ADMIN');
