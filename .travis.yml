@@ -4,6 +4,10 @@ jdk:
 
 sudo: false
 
+install: true
+
+script: mvn clean package -DskipTests=true
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
@@ -17,3 +21,8 @@ notifications:
 env:
   global:
     - CODECOV_TOKEN="c52e2aca-dea4-4f80-aa76-70aa08c4ef0b"
+deploy:
+  provider: heroku
+  api_key:
+    secure: PwtbaVaInLTD9SwYMcDpN40zFuBqXNF8Geh6iSVtc0kNxpYXkCWxG5HdUZiBOaQEcr/Ptym9LIaRd3dKUaUitoFg0G1X8RmbwE4kCrLXpw4NIiGkB9LPtkRc/sR20oUCYdbPtjF70wTS3MDkSU2xbguZQUd2UYwGzUykGLDa3U35iGg15CC933X/giJ5S8oBq1usGRVTyeUSDBzy0VUpOV0VaPgoM8gUBsAMu9MzWPX9ptB6hsYp9hrL4h60GJAQVUe3/+zsU88L0nmBlEXfvYBy2w4ki4XSjGd01L4wndJJXkw4UysXmSzxBHOJDpTp578uJjgjSOT8WKTr2c4jWgeketCkRsDUP1IO1pWABlHoSmdpQz1Ve7g528M3t2yGvBOvf2Uqt9Og7Lp7MW1XDB1JZKI0kIEVA67ar+mdFpTpxh1NASNUnFjIS5nc1/95MWhcNUFs5uA+7ITAhzPR9l2p+wX5W41YKr7pmgbTJAn8fo/yaDnSfBW4gOVVgMSJVbJ7h4oJKuh8mP98t7PCIK7rd33nXW+YV+ugwzDj3qFH8E5XPVaLxogmv1KtNuVAzHSwVXlL6OqCkx6aTUic9+7DqB3fv/g1ovpvfUlL6XbyqXvRRULH50O8tHTqEMtNwV7lvaPAemY5tcWDQacrtVb6H0NeYUQRLDC9UictsAs=
+    app: arcane-badlands-51939
