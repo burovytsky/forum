@@ -61,8 +61,8 @@
                             </td>
                             <td>
                                 <a href="<c:url value='/edit?id=${post.id}'/>">
-                                    <i class="fa fa-edit mr-3"></i>
-                                </a></td>
+                                </a>
+                            </td>
                         </tr>
                     </c:forEach>
                     </tbody>
