@@ -6,20 +6,21 @@ import org.springframework.stereotype.Repository;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Repository
 public class UserMemRepository {
     private final Map<Integer, User> users = new HashMap<>();
-    int idCount = 1;
+    private final AtomicInteger idCount = new AtomicInteger(1);
 
     public UserMemRepository() {
         User user = new User();
-        user.setId(idCount++);
+        user.setId(idCount.incrementAndGet());
         user.setUsername("admin");
         user.setPassword("123456");
 
         User user1 = new User();
-        user1.setId(idCount++);
+        user1.setId(idCount.incrementAndGet());
         user1.setUsername("user");
         user1.setPassword("1234");
         users.put(user1.getId(), user1);
@@ -27,7 +28,7 @@ public class UserMemRepository {
     }
 
     public void saveUser(User user) {
-        user.setId(idCount++);
+        user.setId(idCount.incrementAndGet());
         users.put(user.getId(), user);
     }
 
