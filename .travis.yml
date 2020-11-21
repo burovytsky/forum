@@ -1,22 +1,17 @@
 language: java
 jdk:
   - openjdk14
-
 sudo: false
-
 install: true
-
 script: mvn clean package -DskipTests=true
-
 notifications:
   email:
     recipients:
       - esfero1505@gmail.com
-    on_success: never # default: change
-    on_failure: always # default: always
-
+    on_success: never
+    on_failure: always
 deploy:
   provider: heroku
   api_key:
-    secure: "PwtbaVaInLTD9SwYMcDpN40zFuBqXNF8Geh6iSVtc0kNxpYXkCWxG5HdUZiBOaQEcr/Ptym9LIaRd3dKUaUitoFg0G1X8RmbwE4kCrLXpw4NIiGkB9LPtkRc/sR20oUCYdbPtjF70wTS3MDkSU2xbguZQUd2UYwGzUykGLDa3U35iGg15CC933X/giJ5S8oBq1usGRVTyeUSDBzy0VUpOV0VaPgoM8gUBsAMu9MzWPX9ptB6hsYp9hrL4h60GJAQVUe3/+zsU88L0nmBlEXfvYBy2w4ki4XSjGd01L4wndJJXkw4UysXmSzxBHOJDpTp578uJjgjSOT8WKTr2c4jWgeketCkRsDUP1IO1pWABlHoSmdpQz1Ve7g528M3t2yGvBOvf2Uqt9Og7Lp7MW1XDB1JZKI0kIEVA67ar+mdFpTpxh1NASNUnFjIS5nc1/95MWhcNUFs5uA+7ITAhzPR9l2p+wX5W41YKr7pmgbTJAn8fo/yaDnSfBW4gOVVgMSJVbJ7h4oJKuh8mP98t7PCIK7rd33nXW+YV+ugwzDj3qFH8E5XPVaLxogmv1KtNuVAzHSwVXlL6OqCkx6aTUic9+7DqB3fv/g1ovpvfUlL6XbyqXvRRULH50O8tHTqEMtNwV7lvaPAemY5tcWDQacrtVb6H0NeYUQRLDC9UictsAs="
-    app: "arcane-badlands-51939"
+    secure: PQoTW70mHqa8eQ+jMXOhGKm7vXGnVinP9iQs+6ruH0MBs8hj4TbzkVWpXBhM9Muw68fcxCKf9/LNAOQuL3NhAUAFtotiBxD7YkjynFTgmWznzM2EYFlv2b9hCEzphwbHIH486bwePuAFqUYhH4sFWbkxglXC5B6313KWwuEIC7sYQyMqNI7+uwKeNfcjku37q5Z0jIhXNGrl+j15piByFlbRVF5ZW2pKmzAHdjtYdFQs+QercyjFSUkEqugpWPL+r+TtdEQZYLrthseXTrWhxo0E7+pcgXXiJjYjc/6m2HZ+HHqYujKX9ZkYommwhfHi8YF4wdho7wf5ifOGScySt4Acd0ZkhInBEIaerpCDBHqWPMMY2FjyLNMsANXUSWlh4jTCxZbCHynxlIIOCAIxNM2vJyGv2LzXQSHpq0ylV+EchME8okEKMt37tFKM0eyEy8mnio+Kk+cgf4GbL1hI0kvk7aqWzFMuqeQK1tLTV4+J7mJKHxNUdulEtF8wiqpY0pHuNmay/wg+l3jSky51ttjVN/CRWVh6C5weD3WiL2DiJrI8B7jz5/TOnMX6l8+viDCx4/+oYNYDj/Ux/2lbP2SPGCI+aL2a4FS/z79K/k8voLo4dfB2ZFEY7zYLtbUAcD0o7Rx+HWMlCbJDekjtujVLtS8usZktcShtIGqHuHo=
+    app: arcane-badlands-51939
