@@ -1,6 +1,5 @@
 ## Forum
 
-Simple Forum
 
 Application has realized simple functional of forum. Contains itself registration page,authorization, page with posts and main page with topics.
 
