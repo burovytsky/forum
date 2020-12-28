@@ -61,6 +61,7 @@
                             </td>
                             <td>
                                 <a href="<c:url value='/edit?id=${post.id}'/>">
+                                    Edit
                                 </a>
                             </td>
                         </tr>

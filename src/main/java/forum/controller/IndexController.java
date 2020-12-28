@@ -15,7 +15,7 @@ public class IndexController {
         this.service = service;
     }
 
-    @GetMapping({"/index"})
+    @GetMapping({"/index", "/"})
     public String index(Model model) {
         model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         model.addAttribute("posts", service.getAll());
