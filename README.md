@@ -13,4 +13,22 @@ Used technologies:
 6.CI/CD Travis
 ```
 
+Login page - the application implements registration and authentication of 
+application users.:
+
+![alt text](screenshots/login_error.jpg "login page")
+
+
+A page with all forum topics and their brief description:
+
+
+![alt text](screenshots/index.jpg "index")
+
+
+topic view page with the ability to add comments:
+
+ 
+![alt text](screenshots/post.jpg "post")
+
+
 [![Build Status](https://travis-ci.org/burovytsky/forum.svg?branch=master)](https://travis-ci.org/burovytsky/forum)
